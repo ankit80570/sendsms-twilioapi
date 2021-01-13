@@ -13,7 +13,7 @@ def send_message():
     client.messages.create(to=cellphone, from_=twilio_number, body=msg)
 
 
-schedule.every().day.at("07:00").do(send_message, msg)
+schedule.every().day.at("07:00").do(send_message)
 
 while True:
     schedule.run_pending()
